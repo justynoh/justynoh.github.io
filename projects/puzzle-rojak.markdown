@@ -1,0 +1,19 @@
+---
+layout: page
+title: Puzzle Rojak
+permalink: /projects/puzzle-rojak/
+---
+
+_[back to projects](/projects/)_
+
+During my 2 years of mandatory national service, a friend (Jon) and I embarked on a project to write a puzzlehunt. The end result was [Puzzle Rojak](https://www.puzzlerojak.com/), a week-long online puzzlehunt which ran from 18 to 27 December 2021. The hunt consisted of about 30 puzzles. 380 teams participated, out of which 291 solved at least one puzzle. Over the course of the 9 days, Jon and I split the work of answering hint requests, updating errata to the puzzles and sending out email announcements to the various teams.
+
+The hunt generally received good reviews and we generally felt that we had achieved a good difficulty level for the hunt based on our overarching goals. More has been written about our hunt-writing experience in the [wrapup](https://www.puzzlerojak.com/wrapup).
+
+Other than writing puzzles, my main focus in preparing for the hunt was the infrastructure. One of my focuses was on writing and designing the website. I worked off of the design of [Galactic Puzzle Hunt](https://galacticpuzzlehunt.com/), which offers its base template in Django at [gph-site](https://github.com/galacticpuzzlehunt/gph-site) on github. Since the template used Django, I modified most of the assets and code from the base template in order to make the design of the site thematically ours, both for the name of the hunt (_Puzzle Rojak_) and the theme of the hunt (_Where's Waldo?_).
+
+Most of the modifications to the code came from unlock structure. In particular, unlike most recent hunts which have a two-round (into round + main round) structure, our hunt only had one single, big round which was split into three "sub-rounds", each having its own meta, but all of which unlocked simultaneously. Furthermore, the runaround contained an image which would be gradually revealed based on which metas were solved at each point – for instance, if a team had only solved metas 1 and 2, but not meta 3, only two-thirds of the image in the runaround would be visible. This required rewriting some parts of the html and python code in order to accommodate the modified unlock structure.
+
+The second main focus was on creating each puzzle page in the Django template language and handling setup and maintenance of the database. The database would contain data about the puzzles (e.g. slugs, correct answers and "Keep Going" triggers), each teams' progress through the hunt (e.g. answer submissions, puzzle unlocks and completion times), as well as hint requests (e.g. submissions, responses and counts of each). The database model was written in Django, and the website was run on a Heroku server, on which the database lived. Writes and queries were performed on-demand as needed when a user accessed a page. Manual modifications to the database was mostly done through the admin panel of the site.
+
+During the hunt, an unexpected influx of team registrations created a live production issue with the Heroku database row limit. As we were alarmed by the large number of signups, we had to schedule a maintenance time and communicate to participants that the site would be down for several minutes at that time, in order to migrate our database to one with a higher row limit on Heroku. A live fix was not possible due to the potential of race conditions; in particular, it could be possible that a team submitted an answer in between migrating the database and redirecting the code to the new database address. I prepared for the migration by requesting for a larger database allocation and redirected the code to read from the new database, and during the maintenance, I performed the database migration and pushed the code updates to the Heroku server.
