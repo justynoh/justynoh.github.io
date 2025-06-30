@@ -30,7 +30,6 @@ linkedin_username: justynoh
 # Build settings
 theme: minima
 plugins:
-  - jekyll-feed
   - jekyll-seo-tag
 
 # GitHub Pages settings
