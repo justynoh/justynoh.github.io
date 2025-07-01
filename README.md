@@ -1,6 +1,6 @@
 # Justyn Oh's Personal Website
 
-This is the repository for my personal website, hosted at [justynoh.github.io](https://justynoh.github.io).
+This is the repository for my personal website, hosted at [justynoh.xyz](https://justynoh.xyz) and [justynoh.github.io](https://justynoh.github.io). The site was migrated from WordPress to Jekyll for GitHub Pages hosting.
 
 ## Technology
 
