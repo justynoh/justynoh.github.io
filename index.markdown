@@ -1,6 +1,5 @@
 ---
 layout: home
-title: Home
 ---
 
 ## Hey, I'm Justyn!
@@ -15,20 +14,24 @@ Outside of work, you might find me facing walls at the climbing gym, playing boa
 
 ### Skills
 
-I've worked extensively with:
+<div class="skills-section">
+  <h4>I've worked extensively with:</h4>
+  <ul class="skills-list">
+    <li>TypeScript</li>
+    <li>JavaScript</li>
+    <li>React</li>
+    <li>Node.js</li>
+    <li>MongoDB</li>
+    <li>Git</li>
+    <li>OCaml</li>
+  </ul>
 
-- TypeScript
-- JavaScript
-- React
-- Node.js
-- MongoDB
-- Git
-- OCaml
-
-I'm somewhat familiar with:
-
-- NestJS
-- PostgreSQL
-- Python
-- Haskell
-- C
+  <h4>I'm somewhat familiar with:</h4>
+  <ul class="skills-list">
+    <li>NestJS</li>
+    <li>PostgreSQL</li>
+    <li>Python</li>
+    <li>Haskell</li>
+    <li>C</li>
+  </ul>
+</div>

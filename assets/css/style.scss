@@ -3,136 +3,390 @@
 
 @import "minima";
 
-.profile-section {
-  margin-bottom: 30px;
-  text-align: center;
+/* Import Argent theme fonts */
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,700;1,400&family=Cabin:wght@400;500;600;700&display=swap');
+
+/* Global styles - Argent theme inspired */
+body {
+  font-family: 'Cabin', sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #333;
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
 }
 
-.profile-image {
-  max-width: 300px;
-  border-radius: 5px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.wrapper {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 30px;
 }
 
+/* Typography - Argent style */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Alegreya', serif;
+  font-weight: 700;
+  color: #222;
+  line-height: 1.2;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.75em;
+}
+
+p {
+  margin-bottom: 1.5em;
+}
+
+blockquote {
+  font-family: 'Alegreya', serif;
+  font-style: italic;
+  border-left: 4px solid #ddd;
+  padding-left: 1.5em;
+  margin-left: 0;
+  color: #555;
+}
+
+/* Links - Argent style */
+a {
+  color: #3e69dc;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover, a:focus {
+  color: #2a4ba8;
+  text-decoration: none;
+}
+
+/* Header styles - Argent style */
 .site-header {
-  border-top: 5px solid #424242;
-  border-bottom: 1px solid #e8e8e8;
-  min-height: 55.95px;
-  position: relative;
+  border-top: none;
+  border-bottom: 1px solid #eee;
+  padding: 1.5em 0;
+  margin-bottom: 2em;
 }
 
 .site-title {
-  font-size: 26px;
-  font-weight: 300;
-  line-height: 54px;
-  letter-spacing: -1px;
+  font-family: 'Alegreya', serif;
+  font-size: 2em;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
   margin-bottom: 0;
   float: left;
-  text-decoration: none;
+}
+
+.site-title, .site-title:visited {
+  color: #222;
 }
 
 .site-nav {
   float: right;
-  line-height: 54px;
+  line-height: 2.5em;
 }
 
 .site-nav .page-link {
-  color: #111;
-  line-height: 1.5;
-  margin-left: 20px;
-}
-
-h2 {
-  margin-top: 30px;
   color: #333;
+  font-family: 'Cabin', sans-serif;
+  font-size: 0.9em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-left: 1.5em;
 }
 
-h3 {
-  margin-top: 20px;
-  color: #444;
+.site-nav .page-link:hover {
+  color: #3e69dc;
+}
+
+/* Profile section - Argent style */
+.profile-section {
+  margin: 3em 0 4em;
+  text-align: center;
+}
+
+.profile-image {
+  max-width: 400px;
+  border-radius: 0;
+  box-shadow: none;
+  margin-bottom: 2em;
+}
+
+/* Content styles - Argent style */
+.page-content {
+  padding: 2em 0 4em;
+}
+
+.page-heading {
+  font-family: 'Alegreya', serif;
+  font-size: 2.5em;
+  margin-bottom: 1em;
 }
 
 ul {
-  margin-left: 20px;
+  margin-left: 1.5em;
+  margin-bottom: 1.5em;
 }
 
-a {
-  color: #2a7ae2;
-  text-decoration: none;
+li {
+  margin-bottom: 0.5em;
 }
 
-a:hover {
-  text-decoration: underline;
+/* Skills section - Argent style */
+.skills-section {
+  margin: 2em 0;
 }
 
-.post-list {
+.skills-section h3 {
+  margin-top: 2em;
+  margin-bottom: 1em;
+  text-align: left;
+}
+
+.skills-section h4 {
+  font-family: 'Cabin', sans-serif;
+  font-size: 1.1em;
+  font-weight: 600;
+  margin-top: 1.5em;
+  margin-bottom: 0.75em;
+  color: #444;
+}
+
+.skills-list {
+  list-style-type: none;
   margin-left: 0;
-  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
 }
 
-.post-meta {
-  font-size: 14px;
-  color: #828282;
+.skills-list li {
+  background-color: #f8f8f8;
+  padding: 0.5em 1em;
+  border-radius: 3px;
+  font-size: 0.9em;
+  margin-bottom: 0.5em;
+  border: 1px solid #eee;
+  transition: all 0.2s ease;
 }
 
-.post-link {
-  display: block;
-  font-size: 24px;
+.skills-list li:hover {
+  background-color: #f0f0f0;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 2em;
+  margin: 2em 0;
+}
+
+.skill-item {
+  text-align: center;
+}
+
+.skill-item img {
+  max-width: 70px;
+  height: auto;
+  margin-bottom: 0.75em;
+  transition: transform 0.3s ease;
+}
+
+.skill-item:hover img {
+  transform: scale(1.1);
+}
+
+.skill-item p {
+  font-size: 0.9em;
+  margin-bottom: 0;
+  color: #555;
+}
+
+/* Project styles - Argent style */
+.project-list {
+  margin: 3em 0;
+}
+
+.project-card {
+  margin-bottom: 3em;
+  padding: 0;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 2em;
+  transition: opacity 0.3s ease;
+}
+
+.project-card:hover {
+  opacity: 0.9;
+}
+
+.project-title {
+  font-family: 'Alegreya', serif;
+  font-size: 1.75em;
+  margin-bottom: 0.5em;
+}
+
+.project-description {
+  margin-bottom: 1em;
+}
+
+.project-link {
+  display: inline-block;
+  margin-right: 1em;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.85em;
+  letter-spacing: 1px;
+}
+
+/* Footer styles - Argent style */
+.site-footer {
+  border-top: 1px solid #eee;
+  padding: 3em 0;
+  background-color: #fafafa;
+  color: #666;
+}
+
+.footer-heading {
+  font-family: 'Alegreya', serif;
+  font-size: 1.5em;
+  font-weight: 700;
+  margin-bottom: 1em;
+  color: #333;
 }
 
 .footer-col-wrapper {
-  font-size: 15px;
-  color: #828282;
+  font-size: 0.9em;
+  color: #666;
   margin-left: -15px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .footer-col {
-  float: left;
-  margin-bottom: 15px;
+  margin-bottom: 1.5em;
   padding-left: 15px;
 }
 
 .footer-col-1 {
-  width: -webkit-calc(35% - (30px / 2));
-  width: calc(35% - (30px / 2));
+  width: calc(35% - 30px);
 }
 
 .footer-col-2 {
-  width: -webkit-calc(20% - (30px / 2));
-  width: calc(20% - (30px / 2));
+  width: calc(25% - 30px);
 }
 
 .footer-col-3 {
-  width: -webkit-calc(45% - (30px / 2));
-  width: calc(45% - (30px / 2));
+  width: calc(40% - 30px);
+}
+
+.social-media-list {
+  list-style: none;
+  margin-left: 0;
+}
+
+.social-media-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.75em;
+}
+
+.social-media-list .svg-icon {
+  margin-right: 0.75em;
+  width: 16px;
+  height: 16px;
+  fill: #666;
 }
 
 .footer-copyright {
-  margin-top: 30px;
-  font-size: 14px;
-  color: #828282;
+  margin-top: 2em;
+  font-size: 0.85em;
+  color: #888;
   text-align: center;
-  border-top: 1px solid #e8e8e8;
-  padding-top: 20px;
+  border-top: 1px solid #eee;
+  padding-top: 1.5em;
 }
 
+/* Responsive styles - Argent style */
 @media screen and (max-width: 800px) {
+  .wrapper {
+    padding: 0 20px;
+  }
+  
   .footer-col-1,
   .footer-col-2 {
-    width: -webkit-calc(50% - (30px / 2));
-    width: calc(50% - (30px / 2));
+    width: calc(50% - 30px);
   }
 
   .footer-col-3 {
-    width: -webkit-calc(100% - (30px / 2));
-    width: calc(100% - (30px / 2));
+    width: calc(100% - 30px);
+  }
+  
+  .skills-grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  }
+  
+  .profile-image {
+    max-width: 350px;
   }
 }
 
 @media screen and (max-width: 600px) {
+  .site-nav {
+    position: absolute;
+    top: 1.5em;
+    right: 1em;
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 3px;
+    text-align: right;
+    padding: 0.75em 1em;
+    z-index: 1;
+  }
+  
+  .site-nav .page-link {
+    display: block;
+    margin: 0.75em 0;
+    line-height: 1.5;
+  }
+  
   .footer-col {
     float: none;
-    width: -webkit-calc(100% - (30px / 2));
-    width: calc(100% - (30px / 2));
+    width: calc(100% - 30px);
+  }
+  
+  .profile-image {
+    max-width: 280px;
+  }
+  
+  .skills-grid {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 1.5em;
+  }
+  
+  h1 {
+    font-size: 2em;
+  }
+  
+  h2 {
+    font-size: 1.75em;
+  }
+  
+  h3 {
+    font-size: 1.5em;
   }
 }
