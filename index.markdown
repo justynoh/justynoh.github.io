@@ -1,6 +1,5 @@
 ---
 layout: home
-title: Home
 ---
 
 ## Hey, I'm Justyn!
@@ -15,20 +14,60 @@ Outside of work, you might find me facing walls at the climbing gym, playing boa
 
 ### Skills
 
-I've worked extensively with:
+<div class="skills-section">
+  <h4>I've worked extensively with:</h4>
+  <div class="skills-grid">
+    <div class="skill-item">
+      <img src="/assets/images/skills/typescript.svg" alt="TypeScript logo">
+      <p>TypeScript</p>
+    </div>
+    <div class="skill-item">
+      <img src="/assets/images/skills/javascript.svg" alt="JavaScript logo">
+      <p>JavaScript</p>
+    </div>
+    <div class="skill-item">
+      <img src="/assets/images/skills/react.svg" alt="React logo">
+      <p>React</p>
+    </div>
+    <div class="skill-item">
+      <img src="/assets/images/skills/nodejs.svg" alt="Node.js logo">
+      <p>Node.js</p>
+    </div>
+    <div class="skill-item">
+      <img src="/assets/images/skills/mongodb.svg" alt="MongoDB logo">
+      <p>MongoDB</p>
+    </div>
+    <div class="skill-item">
+      <img src="/assets/images/skills/git.svg" alt="Git logo">
+      <p>Git</p>
+    </div>
+    <div class="skill-item">
+      <img src="/assets/images/skills/ocaml.svg" alt="OCaml logo">
+      <p>OCaml</p>
+    </div>
+  </div>
 
-- TypeScript
-- JavaScript
-- React
-- Node.js
-- MongoDB
-- Git
-- OCaml
-
-I'm somewhat familiar with:
-
-- NestJS
-- PostgreSQL
-- Python
-- Haskell
-- C
+  <h4>I'm somewhat familiar with:</h4>
+  <div class="skills-grid">
+    <div class="skill-item">
+      <img src="/assets/images/skills/nestjs.svg" alt="NestJS logo">
+      <p>NestJS</p>
+    </div>
+    <div class="skill-item">
+      <img src="/assets/images/skills/postgresql.svg" alt="PostgreSQL logo">
+      <p>PostgreSQL</p>
+    </div>
+    <div class="skill-item">
+      <img src="/assets/images/skills/python.svg" alt="Python logo">
+      <p>Python</p>
+    </div>
+    <div class="skill-item">
+      <img src="/assets/images/skills/haskell.svg" alt="Haskell logo">
+      <p>Haskell</p>
+    </div>
+    <div class="skill-item">
+      <img src="/assets/images/skills/c.svg" alt="C logo">
+      <p>C</p>
+    </div>
+  </div>
+</div>
